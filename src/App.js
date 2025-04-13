@@ -17,6 +17,7 @@ import mongodbimg from './Images/mongoDB.png';
 import awsimg from './Images/aws.png';
 import mssqlimg from './Images/mssql-server.png';
 
+import CV from './data/CV.pdf'
 
 import easynote from './Images/projects/awsnotepp.png';
 import hpc from './Images/projects/hpc.jpeg';
@@ -63,23 +64,24 @@ function App() {
       ) : (
         <div className="App">
           <div className="socials">
-            <div>
-              <a href="https://github.com" target="_blank" rel="noreferrer">
-                <i className="fa-brands fa-github"></i>
+            <div className='button'>
+              <a href="https://github.com" target="_blank" rel="noreferrer" title='Check out my GitHub!'>
+                GITHUB
               </a>
             </div>
-            <div>
-              <a href="mailto:arfanahmedpsn@gmail.com">
-                <i className="fa-solid fa-envelope"></i>
+            <div className='button'>
+              <a href="mailto:ahmedmharfan@gmail.com" title="Email Me here! --> ahmedmharfan@gmail.com">
+                <span>EMAIL</span>
               </a>
             </div>
-            <div>
+            <div className='button'>
               <a
                 href="https://linkedin.com/in/ahmed-mohamed-haniffa-arfan-989267202"
                 target="_blank"
                 rel="noreferrer"
+                title="Want to connect via Linkedin?"
               >
-                <i className="fa-brands fa-linkedin"></i>
+                <span style={{display:'inline-flex'}}>LINKEDIN</span>
               </a>
             </div>
           </div>
@@ -91,12 +93,10 @@ function App() {
                 {({ inView, ref }) => (
                   <div className={`intro centre ${inView ? 'show' : 'hidden'}`} ref={ref}>
                     <div><h1>I'm Ahmed</h1></div>
-                    <div><h3>Software Engineer / Developer</h3></div>
+                    <div><h3>Frontend Developer</h3></div>
                     <div><i className="fa-solid fa-location-dot" style={{ padding: 5 }}></i>{' '}London, United Kingdom</div>
                     <div className="button">
-                      <a href="/cv.pdf" download>
-                        <i className="fa-solid fa-cloud-arrow-down"></i> Download CV
-                      </a>
+                      <a href={CV} title="Check My Qualifications out" download>DOWNLOAD CV</a>
                     </div>
                   </div>
                 )}
@@ -111,7 +111,7 @@ function App() {
                           style={{ transitionDelay: `${index * 0.1}s` }} 
                           key={index}
                         >
-                          <img src={imageMap[tech.src]} height={40}/>
+                          <img src={imageMap[tech.src]} height={40} alt={tech.name}/>
                           {tech.name}
                       </div>
                       ))}

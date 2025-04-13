@@ -8,7 +8,7 @@
     },
     {
       "header": "EasyNote",
-      "description": "Note Taking Application",
+      "description": "Note Taking App",
       "img": "easynote",
       "website": "http://awssamnoteapp.s3-website-us-east-1.amazonaws.com/",
       "github": "https://github.com/Wertasile/EasyNote"
@@ -22,7 +22,7 @@
     },
     {
       "header": "Promptopia",
-      "description": "Social Media Application",
+      "description": "Social Media App",
       "img": "promptopia",
       "website": "https://ai-prompt-tool-inky.vercel.app/",
       "github": "https://github.com/Wertasile/ai_prompt_tool?tab=readme-ov-file"

@@ -9,13 +9,20 @@
   color: rgb(253, 255, 232);
 }
 
+:root{
+  --neon:#c2fe0b;
+  --violet:#5200ff;
+  --darkblue:#29324f;
+  --red:#ff0d1a;
+}
+
 body {
   cursor: url('./Cursors/white-circle-cursor.png'), auto;
 }
 
 .loader {
   border: 10px solid #f3f3f3; /* Light grey */
-  border-top: 10px solid #a172f9a9; /* Blue */
+  border-top: 10px solid var(--neon); /* Blue */
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -46,20 +53,19 @@ img{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #A172F9; 
+  background: var(--neon); 
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #a172f9a9;
+  background: var(--neon);
   border-radius: 10px;
 }
 
 .switch{
   width:100px;
   background-color: #282c34;
-  border-radius: 25px;
   position: relative;
   height: 50px;
   justify-content: center;
@@ -68,8 +74,7 @@ img{
 .switch div{
   position: absolute;
   padding: 13px;
-  border-radius: 50px;
-  background-color:tomato;
+  background-color:var(--red);
   width: 55px;
   height: 50px;
   align-self: center;
@@ -99,7 +104,7 @@ h1{
 
 h1::after{
   content:'';
-  background: linear-gradient(to right, #ff1a6a, rgb(0, 153, 255));
+  background: var(--neon);
   height:4px;
   width: 100%;
   position: absolute;
@@ -161,7 +166,6 @@ h1::after{
 
 .child{
   padding: 5px;
-  border-radius: 5px;
   grid-row: 2;
   grid-column: 1/3;
   position: relative;
@@ -173,7 +177,6 @@ h1::after{
   grid-row: 1;
   grid-column: 1/3;
   padding: 5px;
-  border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(2,1fr);
@@ -200,7 +203,7 @@ h1::after{
 .tech div{
   background-color: #171815;
   padding: 5px;
-  border-radius: 10px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -220,25 +223,27 @@ h1::after{
   align-items: center;
   justify-content: center;
   z-index: 3;
-  font-size: 26px;
+  font-size: 1rem;
   background: #1A1A1A;
   padding: 10px;
   border: solid 1px rgb(155, 148, 148);
-  border-radius: 10px;
 }
 
-.socials div{
+.button{
   padding: 13px;
-  border-radius: 50px;
-  background-color:tomato;
-  width: 55px;
+  background-color:var(--red);
+  font-family:'Chakra Petch', sans-serif;
+  width: 150px;
 
 }
 
-.socials div:hover{
+.button:hover{
   transition: ease-in-out;
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition-duration: 150ms;
+  border: solid 1px var(--red);
+  background-color: #29324f;
+  color: white;
 }
 
 
@@ -246,7 +251,7 @@ h1::after{
   perspective: 1000px;
   cursor: url('./Cursors/clickable-cursor.png'), auto;
   position: relative; /* Add this line */      /* Add a fixed height if needed */
-  height:1400px;
+  height:400px;
 }
 
 
@@ -260,20 +265,6 @@ h1::after{
 
 .flipped{
   transform: rotateY(180deg);
-}
-
-.button:hover{
-  transition: ease-in-out;
-  transform: scale(1.2);
-  transition-duration: 200ms;
-}
-
-.button{
-  padding: 5px;
-  background-color: #A172F9;
-  border-radius: 5px;
-  cursor: url('./Cursors/clickable-cursor.png'), auto;
-  height: 30px;
 }
 
 
@@ -290,7 +281,7 @@ h1::after{
   border-radius: 5px;
   margin: 3px;
   cursor: url('./Cursors/clickable-cursor.png'), auto;
-  background:#A172F9;
+  background:var(--violet);
 }
 
 /* .card:hover .card-inner {
@@ -328,12 +319,9 @@ h1::after{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  padding: 10px;
   background-color: #171815;
   border-top: #464940 solid 0.5px;
   border-bottom: #464940 solid 0.5px;
-  border-radius: 10px;
   width: 100%;
 }
 
@@ -385,6 +373,44 @@ h1::after{
 .tech-item.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media screen and (max-width: 480px) {
+  
+  .tech{
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  }
+
+  p, h2{
+    margin: none;
+    font-size: 1rem;
+  }
+
+  .button{
+    width: 100px;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .project-item{
+    text-align: left;
+  }
+
+  .switch{
+    height: 30px;
+    width: 60px;
+  }
+
+  .switch div{
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+  }
+
+  .socials{
+    display: none;
+  }
+  
 }
 
 
