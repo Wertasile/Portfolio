@@ -158,6 +158,7 @@ function App() {
                             header={project.header}
                             img={projectImageMap[project.img]}
                             description={project.description}
+                            techstack={project.techstack}
                             website={project.website}
                             github={project.github}
                           />

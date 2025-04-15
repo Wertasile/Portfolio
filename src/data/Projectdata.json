@@ -3,6 +3,7 @@
       "header": "Discourse",
       "description": "Real Time Chat App",
       "img": "discourse",
+      "techstack": "MongoDB, ExpressJS, React, NodeJS",
       "website": "https://real-time-chat-app-mern-un4z.onrender.com/",
       "github": "https://github.com/Wertasile/real-time-chat-app-MERN"
     },
@@ -10,6 +11,7 @@
       "header": "EasyNote",
       "description": "Note Taking App",
       "img": "easynote",
+      "techstack": "Blazor WASM, AWS (BackEnd)",
       "website": "http://awssamnoteapp.s3-website-us-east-1.amazonaws.com/",
       "github": "https://github.com/Wertasile/EasyNote"
     },
@@ -17,6 +19,7 @@
       "header": "Moviemania",
       "description": "Movie Catalogue",
       "img": "moviemania",
+      "techstack": "JavaScript, TMDB-API",
       "website": "https://wertasile.github.io/Movie-Web-Catalogue.github.io/",
       "github": "https://github.com/Wertasile/Movie-Web-Catalogue.github.io?tab=readme-ov-file"
     },
@@ -24,6 +27,7 @@
       "header": "Promptopia",
       "description": "Social Media App",
       "img": "promptopia",
+      "techstack": "MongoDB, NextJS",
       "website": "https://ai-prompt-tool-inky.vercel.app/",
       "github": "https://github.com/Wertasile/ai_prompt_tool?tab=readme-ov-file"
     }

@@ -1,12 +1,13 @@
 import React from 'react'
 import '../App.css';
 
-const ProjectItem = ({ header, description, img, website, github }) => {
+const ProjectItem = ({ header, description, img, website, github, techstack }) => {
   return (
     <div className='project-item'>
-      <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around'}}>
+      <div style={{display:'flex', flexDirection:'column', justifyContent:'space-around', textAlign:"left"}}>
         <div><h2>{header}</h2></div>
         <div>{description}</div>
+        <div style={{color:'#b8b7b7'}}>{techstack}</div>
         
       </div>
       <div>

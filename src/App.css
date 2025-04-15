@@ -3,7 +3,7 @@
   text-align: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: #0C0F0C;
+  background-color: #232429;
   padding: 15px;
   font-family: 'Hanken Grotesk','Inter', sans-serif;
   color: rgb(253, 255, 232);
@@ -13,7 +13,8 @@
   --neon:#c2fe0b;
   --violet:#5200ff;
   --darkblue:#29324f;
-  --red:#ff0d1a;
+  --red:#FF1261;
+  --gray:#33343D;
 }
 
 body {
@@ -201,7 +202,7 @@ h1::after{
 
 
 .tech div{
-  background-color: #171815;
+  background-color: var(--gray);
   padding: 5px;
 
   display: flex;
@@ -319,9 +320,10 @@ h1::after{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #171815;
+  background-color: var(--gray);
   border-top: #464940 solid 0.5px;
   border-bottom: #464940 solid 0.5px;
+  padding: 0px 10px 0px 10px;
   width: 100%;
 }
 
@@ -331,7 +333,7 @@ h1::after{
   align-items: center;
   gap: 5px;
   padding: 10px;
-  background-color: #171815;
+  background-color: var(--gray);
   border-top: #464940 solid 0.5px;
   border-bottom: #464940 solid 0.5px;
 }
@@ -382,7 +384,7 @@ h1::after{
   }
 
   p, h2{
-    margin: none;
+    margin-bottom: 10px;
     font-size: 1rem;
   }
 
