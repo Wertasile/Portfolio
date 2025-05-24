@@ -13,7 +13,7 @@
       "img": "easynote",
       "techstack": "Blazor WASM, AWS (BackEnd)",
       "website": "http://awssamnoteapp.s3-website-us-east-1.amazonaws.com/",
-      "github": "https://github.com/Wertasile/EasyNote"
+      "github": "https://eznoteapp.netlify.app/"
     },
     {
       "header": "Moviemania",
