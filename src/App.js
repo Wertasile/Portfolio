@@ -63,30 +63,34 @@ function App() {
         </div>
       ) : (
         <div className="App">
-          <div className="socials">
-            <div className='button'>
-              <a href="https://github.com" target="_blank" rel="noreferrer" title='Check out my GitHub!'>
-                GITHUB
-              </a>
+          <header className="socials">
+            <div>
+              <img src="/Images/AA_light.png" height="32" alt=""/>
             </div>
-            <div className='button'>
-              <a href="mailto:ahmedmharfan@gmail.com" title="Email Me here! --> ahmedmharfan@gmail.com">
-                <span>EMAIL</span>
-              </a>
-            </div>
-            <div className='button'>
-              <a
-                href="https://linkedin.com/in/ahmed-mohamed-haniffa-arfan-989267202"
-                target="_blank"
-                rel="noreferrer"
-                title="Want to connect via Linkedin?"
-              >
-                <span style={{display:'inline-flex'}}>LINKEDIN</span>
-              </a>
-            </div>
-          </div>
+            <nav>
+              <div className='button'>
+                <a href="https://github.com" target="_blank" rel="noreferrer" title='Check out my GitHub!'>GITHUB</a>
+              </div>
+              <div className='button'>
+                <a href="mailto:ahmedmharfan@gmail.com" title="Email Me here! --> ahmedmharfan@gmail.com">
+                  <span>EMAIL</span>
+                </a>
+              </div>
+              <div className='button'>
+                <a
+                  href="https://linkedin.com/in/ahmed-mohamed-haniffa-arfan-989267202"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Want to connect via Linkedin?"
+                >
+                  <span style={{display:'inline-flex'}}>LINKEDIN</span>
+                </a>
+              </div>
+            </nav>
+            
+          </header>
 
-          <div className="parent-grid">
+          <main className="parent-grid">
             {/* HERO BANNER - INTRODUCTION AND TECH STACK */}
             <section className="hero-grid">
               <InView threshold={0.2} triggerOnce>
@@ -108,7 +112,7 @@ function App() {
                       {techstackData.map((tech,index) => (
                         <div 
                           className={`tech-item ${inView ? 'show' : 'hidden'}`} 
-                          style={{ transitionDelay: `${index * 0.1}s` }} 
+                          style={{ transitionDelay: `${index * 0.2}s` }} 
                           key={index}
                         >
                           <img src={imageMap[tech.src]} height={40} alt={tech.name}/>
@@ -180,7 +184,7 @@ function App() {
                 </section>
               )}
             </InView>
-          </div>
+          </main>
         </div>
       )}
     </>
